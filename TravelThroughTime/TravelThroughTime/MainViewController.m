@@ -12,24 +12,34 @@
 @interface MainViewController ()
 @property (nonatomic, strong)CameraViewController* cameraVC;
 @property (nonatomic, strong)HistoryPictureViewController* pictureVC;
+
 @end
 
 @implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = YES;
     self.cameraVC = [CameraViewController new];
     self.pictureVC= [HistoryPictureViewController new];
     [self addChildViewController:self.cameraVC];
     [self addChildViewController:self.pictureVC];
+    [self.view addSubview:self.cameraVC.view];
+    [self.view addSubview:self.pictureVC.view];
+    self.pictureVC.view.hidden = YES;
 }
 -(void)viewWillAppear:(BOOL)animated{
-    [[PermissionUtil sharedInstance]requestAccessForCamera:^(BOOL granted) {
-        if (granted) {
-            [self.view addSubview:self.cameraVC.view];
-        }
-    }];
+
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [SVProgressHUD showWithStatus:@"发现目标正在处理"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+            self.cameraVC.viewFrame = CGRectMake(0, 0, ScreenWith, ScreenHeight/2);
+            self.pictureVC.view.hidden = NO;
+            self.pictureVC.viewFrame =CGRectMake(0, ScreenHeight/2, ScreenWith, ScreenHeight/2);
+        });
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,14 +47,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

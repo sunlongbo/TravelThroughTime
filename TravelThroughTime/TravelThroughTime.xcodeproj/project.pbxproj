@@ -14,6 +14,12 @@
 		02EF6165200C87E700BAD978 /* HistoryPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EF6164200C87E700BAD978 /* HistoryPictureViewController.m */; };
 		02EF6168200C882E00BAD978 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EF6167200C882E00BAD978 /* CameraViewController.m */; };
 		02EF6182200C8BC600BAD978 /* PermissionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EF6181200C8BC600BAD978 /* PermissionUtil.m */; };
+		02EF618A200C9C3300BAD978 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02EF6189200C9C3300BAD978 /* Launch Screen.storyboard */; };
+		02EF6196200CC6DB00BAD978 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EF618D200CC6DB00BAD978 /* SVIndefiniteAnimatedView.m */; };
+		02EF6197200CC6DB00BAD978 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EF618F200CC6DB00BAD978 /* SVProgressAnimatedView.m */; };
+		02EF6198200CC6DB00BAD978 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 02EF6191200CC6DB00BAD978 /* SVProgressHUD.bundle */; };
+		02EF6199200CC6DB00BAD978 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EF6193200CC6DB00BAD978 /* SVProgressHUD.m */; };
+		02EF619A200CC6DB00BAD978 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EF6195200CC6DB00BAD978 /* SVRadialGradientLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,18 @@
 		02EF6180200C8BC600BAD978 /* PermissionUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermissionUtil.h; sourceTree = "<group>"; };
 		02EF6181200C8BC600BAD978 /* PermissionUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermissionUtil.m; sourceTree = "<group>"; };
 		02EF6183200C8DA600BAD978 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		02EF6189200C9C3300BAD978 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		02EF618C200CC6DB00BAD978 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		02EF618D200CC6DB00BAD978 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		02EF618E200CC6DB00BAD978 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		02EF618F200CC6DB00BAD978 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		02EF6190200CC6DB00BAD978 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		02EF6191200CC6DB00BAD978 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		02EF6192200CC6DB00BAD978 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		02EF6193200CC6DB00BAD978 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		02EF6194200CC6DB00BAD978 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		02EF6195200CC6DB00BAD978 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		02EF61A7200CC85800BAD978 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +82,7 @@
 		02EF6148200C410800BAD978 /* TravelThroughTime */ = {
 			isa = PBXGroup;
 			children = (
+				02EF618B200CC6DB00BAD978 /* SVProgressHUD */,
 				02EF6149200C410800BAD978 /* AppDelegate.h */,
 				02EF614A200C410800BAD978 /* AppDelegate.m */,
 				02EF6152200C410900BAD978 /* Assets.xcassets */,
@@ -78,8 +97,27 @@
 				02EF6180200C8BC600BAD978 /* PermissionUtil.h */,
 				02EF6181200C8BC600BAD978 /* PermissionUtil.m */,
 				02EF6183200C8DA600BAD978 /* PrefixHeader.pch */,
+				02EF6189200C9C3300BAD978 /* Launch Screen.storyboard */,
+				02EF61A7200CC85800BAD978 /* Define.h */,
 			);
 			path = TravelThroughTime;
+			sourceTree = "<group>";
+		};
+		02EF618B200CC6DB00BAD978 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				02EF618C200CC6DB00BAD978 /* SVIndefiniteAnimatedView.h */,
+				02EF618D200CC6DB00BAD978 /* SVIndefiniteAnimatedView.m */,
+				02EF618E200CC6DB00BAD978 /* SVProgressAnimatedView.h */,
+				02EF618F200CC6DB00BAD978 /* SVProgressAnimatedView.m */,
+				02EF6190200CC6DB00BAD978 /* SVProgressHUD-Prefix.pch */,
+				02EF6191200CC6DB00BAD978 /* SVProgressHUD.bundle */,
+				02EF6192200CC6DB00BAD978 /* SVProgressHUD.h */,
+				02EF6193200CC6DB00BAD978 /* SVProgressHUD.m */,
+				02EF6194200CC6DB00BAD978 /* SVRadialGradientLayer.h */,
+				02EF6195200CC6DB00BAD978 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +178,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02EF618A200C9C3300BAD978 /* Launch Screen.storyboard in Resources */,
+				02EF6198200CC6DB00BAD978 /* SVProgressHUD.bundle in Resources */,
 				02EF6153200C410900BAD978 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,7 +196,11 @@
 				02EF6182200C8BC600BAD978 /* PermissionUtil.m in Sources */,
 				02EF614B200C410800BAD978 /* AppDelegate.m in Sources */,
 				02EF6165200C87E700BAD978 /* HistoryPictureViewController.m in Sources */,
+				02EF6199200CC6DB00BAD978 /* SVProgressHUD.m in Sources */,
+				02EF6196200CC6DB00BAD978 /* SVIndefiniteAnimatedView.m in Sources */,
 				02EF6162200C84B600BAD978 /* MainViewController.m in Sources */,
+				02EF6197200CC6DB00BAD978 /* SVProgressAnimatedView.m in Sources */,
+				02EF619A200CC6DB00BAD978 /* SVRadialGradientLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

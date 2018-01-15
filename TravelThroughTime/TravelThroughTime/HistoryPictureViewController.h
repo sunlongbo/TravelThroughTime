@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HistoryPictureViewController : UIViewController
-
+- (void)setViewFrame:(CGRect)frame;
 @end
