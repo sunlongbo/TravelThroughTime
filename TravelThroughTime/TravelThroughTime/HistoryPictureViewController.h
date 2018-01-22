@@ -10,4 +10,5 @@
 
 @interface HistoryPictureViewController : UIViewController
 - (void)setViewFrame:(CGRect)frame;
+- (void)scrollItemByYaw:(float)yaw;
 @end

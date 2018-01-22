@@ -14,5 +14,6 @@
 #import "PermissionUtil.h"
 #import "SVProgressHUD.h"
 #import "Define.h"
+#import "GLUtil.h"
 #endif /* PrefixHeader_pch */
 
