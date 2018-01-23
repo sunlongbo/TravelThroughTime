@@ -11,6 +11,7 @@
 #import "HistoryPictureViewController.h"
 #import <CoreMotion/CoreMotion.h>
 #import <GLKit/GLKit.h>
+#import "PictureFoldViewController.h"
 @interface MainViewController ()
 @property (nonatomic, strong) CameraViewController* cameraVC;
 @property (nonatomic, strong) HistoryPictureViewController* pictureVC;
@@ -36,10 +37,12 @@
         [SVProgressHUD showWithStatus:@"发现目标正在处理"];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [SVProgressHUD dismiss];
-            self.cameraVC.viewFrame = CGRectMake(0, 0, ScreenWith, ScreenHeight);
-            self.pictureVC.view.hidden = NO;
-            self.pictureVC.viewFrame =CGRectMake(0, 0, ScreenWith, ScreenHeight);
+//            self.cameraVC.viewFrame = CGRectMake(0, 0, ScreenWith, ScreenHeight);
+//            self.pictureVC.view.hidden = NO;
+//            self.pictureVC.viewFrame =CGRectMake(0, 0, ScreenWith, ScreenHeight);
 
+            PictureFoldViewController* nextVC = [[PictureFoldViewController alloc]init];
+            [self.navigationController pushViewController:nextVC animated:YES];
         });
     });
 }
